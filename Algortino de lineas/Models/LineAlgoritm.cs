@@ -15,7 +15,7 @@ namespace Algortino_de_lineas
         public float P;
         public float varx;
         public float vary;
-        public const float SF = 20;
+        public const float SF = 10/2f;
         public Bitmap bufferBitmap;
         public Graphics bufferGraphics;
         public PictureBox canvas;
@@ -28,9 +28,6 @@ namespace Algortino_de_lineas
             canvas = picCanvas;
             this.startPoint = startPoint;
             this.endPoint = endPoint; 
-            this.varx = 0;
-            this.vary = 0;
-            this.currentStep = 0;
             this.puntos = new List<PointF>();
         }
 
@@ -40,6 +37,9 @@ namespace Algortino_de_lineas
             bufferBitmap = new Bitmap(canvas.Width, canvas.Height);
             bufferGraphics = Graphics.FromImage(bufferBitmap);
             bufferGraphics.Clear(Color.White);
+            varx = 0;
+            vary = 0;
+            currentStep = 0;
         }
 
 
@@ -71,6 +71,7 @@ namespace Algortino_de_lineas
             }
         }
 
+
         public void bresenhamCalculator()
         {
             puntos.Clear();
@@ -79,8 +80,7 @@ namespace Algortino_de_lineas
             vary = endPoint.Y - startPoint.Y;
             slope = Math.Abs(vary / varx);
             if (slope > 1){ P = (2 * varx) - vary; }
-            else if (0 < slope && slope < 1){ P = (2 * vary) - varx; 
-            }
+            else if (0 < slope && slope < 1){ P = (2 * vary) - varx;}
             kIteraciones = Math.Max(varx, vary);
 
             puntos.Add(startPoint);
@@ -105,7 +105,7 @@ namespace Algortino_de_lineas
             pointsCalculator(i, startPoint, endPoint, P);
         }
 
-
+        // Metodo para poder mostrar cada punto Paso a Paso
         public void DrawNextStep()
         {
             if (currentStep >= puntos.Count)

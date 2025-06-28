@@ -39,6 +39,9 @@ namespace Algortino_de_lineas
             bufferBitmap = new Bitmap(canvas.Width, canvas.Height);
             bufferGraphics = Graphics.FromImage(bufferBitmap);
             bufferGraphics.Clear(Color.White);
+            cx = (bufferBitmap.Width/2);
+            cy = (bufferBitmap.Height/2);
+
         }
         public void calculaterCircunferencia() {
            
@@ -68,14 +71,14 @@ namespace Algortino_de_lineas
         public void drawPointCircle(float x, float y)
         {
 
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) + (x * SF), ((bufferBitmap.Height / 2) + (-y * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) - (x * SF), ((bufferBitmap.Height / 2) + (-y * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) - (x * SF), ((bufferBitmap.Height / 2) - (-y * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) + (x * SF), ((bufferBitmap.Height / 2) - (-y * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) + (y * SF), ((bufferBitmap.Height / 2) + (-x * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) - (y * SF), ((bufferBitmap.Height / 2) + (-x * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) - (y * SF), ((bufferBitmap.Height / 2) - (-x * SF)), 5, 5);
-            bufferGraphics.FillRectangle(Brushes.Blue, (bufferBitmap.Width / 2) + (y * SF), ((bufferBitmap.Height / 2) - (-x * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx + (x * SF), (cy + (-y * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx - (x * SF), (cy - (-y * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx + (x * SF), (cy - (-y * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx - (x * SF), (cy + (-y * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx + (y * SF), (cy + (-x * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx - (y * SF), (cy + (-x * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx - (y * SF), (cy - (-x * SF)), 5, 5);
+            bufferGraphics.FillRectangle(Brushes.Blue, cx + (y * SF), (cy - (-x * SF)), 5, 5);
         }
         public void DrawNextStep()
         {

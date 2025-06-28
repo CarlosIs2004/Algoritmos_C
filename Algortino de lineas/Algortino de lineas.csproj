@@ -46,54 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BresenHam_Form.cs">
+    <Compile Include="Views\BresenHam_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BresenHam_Form.Designer.cs">
+    <Compile Include="Views\BresenHam_Form.Designer.cs">
       <DependentUpon>BresenHam_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Discretizacion_Forms.cs">
+    <Compile Include="Views\Discretizacion_Forms.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Discretizacion_Forms.Designer.cs">
+    <Compile Include="Views\Discretizacion_Forms.Designer.cs">
       <DependentUpon>Discretizacion_Forms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Relleno.cs">
+    <Compile Include="Views\Form_Relleno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Relleno.Designer.cs">
+    <Compile Include="Views\Form_Relleno.Designer.cs">
       <DependentUpon>Form_Relleno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Form.cs">
+    <Compile Include="Views\Menu_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Form.Designer.cs">
+    <Compile Include="Views\Menu_Form.Designer.cs">
       <DependentUpon>Menu_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Relleno.cs" />
-    <Compile Include="LineAlgoritm.cs" />
-    <Compile Include="DiscretizaciónCircunferencia.cs" />
-    <Compile Include="DDA_Form1.cs">
+    <Compile Include="Models\Relleno.cs" />
+    <Compile Include="Models\LineAlgoritm.cs" />
+    <Compile Include="Models\DiscretizaciónCircunferencia.cs" />
+    <Compile Include="Views\DDA_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DDA_Form1.Designer.cs">
+    <Compile Include="Views\DDA_Form1.Designer.cs">
       <DependentUpon>DDA_Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BresenHam_Form.resx">
+    <EmbeddedResource Include="Views\BresenHam_Form.resx">
       <DependentUpon>BresenHam_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DDA_Form1.resx">
+    <EmbeddedResource Include="Views\DDA_Form1.resx">
       <DependentUpon>DDA_Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Discretizacion_Forms.resx">
+    <EmbeddedResource Include="Views\Discretizacion_Forms.resx">
       <DependentUpon>Discretizacion_Forms.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Relleno.resx">
+    <EmbeddedResource Include="Views\Form_Relleno.resx">
       <DependentUpon>Form_Relleno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Form.resx">
+    <EmbeddedResource Include="Views\Menu_Form.resx">
       <DependentUpon>Menu_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -120,7 +120,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
