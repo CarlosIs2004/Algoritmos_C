@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Algortino_de_lineas.Views;
 
 namespace Algortino_de_lineas
 {
@@ -50,16 +51,49 @@ namespace Algortino_de_lineas
             openChildForm(new BresenHam_Form());
         }
 
-        private void circunfenciaToolStripMenuItem_Click(object sender, EventArgs e)
+
+  
+
+        private void circunferenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new Discretizacion_Forms());
         }
 
-       
+        private void elipseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ElipseForm());
+        }
 
-        private void rellenoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void floodFillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new Form_Relleno());
+        }
+
+        private void scanlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_scanline());
+
+        }
+
+        private void coToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_CohenSutherland());
+        }
+
+        private void sutherlandHodgmanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_Sutherland_Hodgman());
+        }
+
+
+        private void curvasDeBézierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_Curvas_Bezier());
+        }
+
+        private void bsplinesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_B_splines());
         }
     }
 }

@@ -95,7 +95,7 @@ namespace Algortino_de_lineas
         }
         
 
-        public void polygon(int nVertice, float radius) {
+        public static PointF[] polygonPoints(PointF center,int nVertice, float radius) {
             radius = radius * SF;
             PointF[] pointsPoligonArr = new PointF[(int)nVertice];
             float angle = 45;
@@ -103,14 +103,53 @@ namespace Algortino_de_lineas
             for (int i = 0; i < nVertice; i++){
                 
                 radianes = angle * ((float)Math.PI / 180);
-                float x = centerX + (radius) * (float)(Math.Cos(radianes));
-                float y= centerY + (radius) * (float)(Math.Sin(radianes));
+                float x = center.X + (radius) * (float)(Math.Cos(radianes));
+                float y= center.Y + (radius) * (float)(Math.Sin(radianes));
                 pointsPoligonArr[i] = new PointF(x, y);
                 angle += (360 / nVertice);
 
             }
-            
-            bufferGraphics.DrawPolygon(Pens.Blue, pointsPoligonArr);
+            return pointsPoligonArr;
+        }
+
+       public static Point[] ScanlineFillPoints(Bitmap canvas, PointF[] polygon)
+        {
+            List<Point> fillPoints = new List<Point>();
+
+            if (polygon == null || polygon.Length < 3)
+                return fillPoints.ToArray();
+
+            int minY = (int)polygon.Min(p => p.Y);
+            int maxY = (int)polygon.Max(p => p.Y);
+
+            for (int y = minY; y <= maxY; y++)
+            {
+                List<int> nodes = new List<int>();
+                int j = polygon.Length - 1;
+                for (int i = 0; i < polygon.Length; i++)
+                {
+                    if ((polygon[i].Y < y && polygon[j].Y >= y) ||
+                        (polygon[j].Y < y && polygon[i].Y >= y))
+                    {
+                        int x = (int)(polygon[i].X + (float)(y - polygon[i].Y) / (polygon[j].Y - polygon[i].Y) * (polygon[j].X - polygon[i].X));
+                        nodes.Add(x);
+                    }
+                    j = i;
+                }
+                nodes.Sort();
+                for (int k = 0; k < nodes.Count; k += 2)
+                {
+                    if (k + 1 >= nodes.Count) break;
+                    for (int x = nodes[k]; x < nodes[k + 1]; x++)
+                    {
+                        fillPoints.Add(new Point(x, y));
+                        canvas.SetPixel(x, y, Color.Blue);
+
+                    }
+                }
+            }
+
+            return fillPoints.ToArray();
         }
 
 

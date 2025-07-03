@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AnimacionesController.cs" />
+    <Compile Include="Controllers\GraficarFigurasController.cs" />
+    <Compile Include="Models\CurvasParametricas.cs" />
+    <Compile Include="Models\RecorteGeometrico.cs" />
     <Compile Include="Views\BresenHam_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +62,47 @@
     <Compile Include="Views\Discretizacion_Forms.Designer.cs">
       <DependentUpon>Discretizacion_Forms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ElipseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ElipseForm.Designer.cs">
+      <DependentUpon>ElipseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_B_splines .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_B_splines .Designer.cs">
+      <DependentUpon>Form_B_splines .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_CohenSutherland.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_CohenSutherland.Designer.cs">
+      <DependentUpon>Form_CohenSutherland.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Curvas_Bezier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Curvas_Bezier.Designer.cs">
+      <DependentUpon>Form_Curvas_Bezier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_Relleno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Form_Relleno.Designer.cs">
       <DependentUpon>Form_Relleno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_scanline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_scanline.Designer.cs">
+      <DependentUpon>Form_scanline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Sutherland_Hodgman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Sutherland_Hodgman.Designer.cs">
+      <DependentUpon>Form_Sutherland_Hodgman.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Menu_Form.cs">
       <SubType>Form</SubType>
@@ -72,7 +112,7 @@
     </Compile>
     <Compile Include="Models\Relleno.cs" />
     <Compile Include="Models\LineAlgoritm.cs" />
-    <Compile Include="Models\DiscretizaciónCircunferencia.cs" />
+    <Compile Include="Models\DiscretizacionCircunferencia.cs" />
     <Compile Include="Views\DDA_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +130,26 @@
     <EmbeddedResource Include="Views\Discretizacion_Forms.resx">
       <DependentUpon>Discretizacion_Forms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ElipseForm.resx">
+      <DependentUpon>ElipseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_B_splines .resx">
+      <DependentUpon>Form_B_splines .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_CohenSutherland.resx">
+      <DependentUpon>Form_CohenSutherland.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Curvas_Bezier.resx">
+      <DependentUpon>Form_Curvas_Bezier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_Relleno.resx">
       <DependentUpon>Form_Relleno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_scanline.resx">
+      <DependentUpon>Form_scanline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Sutherland_Hodgman.resx">
+      <DependentUpon>Form_Sutherland_Hodgman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Menu_Form.resx">
       <DependentUpon>Menu_Form.cs</DependentUpon>
@@ -119,8 +177,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

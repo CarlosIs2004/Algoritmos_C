@@ -33,7 +33,17 @@
             this.dDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bresenhamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.circunfenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circunferenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elipseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rellenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.floodFillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scanlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sutherlandHodgmanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.curvasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.curvasDeBézierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsplinesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +53,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lineToolStripMenuItem,
             this.circunfenciaToolStripMenuItem,
-            this.rellenoToolStripMenuItem});
+            this.rellenoToolStripMenuItem,
+            this.recorteToolStripMenuItem,
+            this.curvasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -75,17 +87,95 @@
             // 
             // circunfenciaToolStripMenuItem
             // 
+            this.circunfenciaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.circunferenciaToolStripMenuItem,
+            this.elipseToolStripMenuItem});
             this.circunfenciaToolStripMenuItem.Name = "circunfenciaToolStripMenuItem";
-            this.circunfenciaToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.circunfenciaToolStripMenuItem.Text = "Circunfencia";
-            this.circunfenciaToolStripMenuItem.Click += new System.EventHandler(this.circunfenciaToolStripMenuItem_Click);
+            this.circunfenciaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.circunfenciaToolStripMenuItem.Text = "Conicas";
+            // 
+            // circunferenciaToolStripMenuItem
+            // 
+            this.circunferenciaToolStripMenuItem.Name = "circunferenciaToolStripMenuItem";
+            this.circunferenciaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.circunferenciaToolStripMenuItem.Text = "Circunferencia";
+            this.circunferenciaToolStripMenuItem.Click += new System.EventHandler(this.circunferenciaToolStripMenuItem_Click);
+            // 
+            // elipseToolStripMenuItem
+            // 
+            this.elipseToolStripMenuItem.Name = "elipseToolStripMenuItem";
+            this.elipseToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.elipseToolStripMenuItem.Text = "Elipse";
+            this.elipseToolStripMenuItem.Click += new System.EventHandler(this.elipseToolStripMenuItem_Click);
             // 
             // rellenoToolStripMenuItem
             // 
+            this.rellenoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.floodFillToolStripMenuItem,
+            this.scanlineToolStripMenuItem});
             this.rellenoToolStripMenuItem.Name = "rellenoToolStripMenuItem";
             this.rellenoToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.rellenoToolStripMenuItem.Text = "Relleno";
-            this.rellenoToolStripMenuItem.Click += new System.EventHandler(this.rellenoToolStripMenuItem_Click);
+            // 
+            // floodFillToolStripMenuItem
+            // 
+            this.floodFillToolStripMenuItem.Name = "floodFillToolStripMenuItem";
+            this.floodFillToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.floodFillToolStripMenuItem.Text = "Flood Fill";
+            this.floodFillToolStripMenuItem.Click += new System.EventHandler(this.floodFillToolStripMenuItem_Click);
+            // 
+            // scanlineToolStripMenuItem
+            // 
+            this.scanlineToolStripMenuItem.Name = "scanlineToolStripMenuItem";
+            this.scanlineToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.scanlineToolStripMenuItem.Text = "Scanline";
+            this.scanlineToolStripMenuItem.Click += new System.EventHandler(this.scanlineToolStripMenuItem_Click);
+            // 
+            // recorteToolStripMenuItem
+            // 
+            this.recorteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coToolStripMenuItem,
+            this.sutherlandHodgmanToolStripMenuItem});
+            this.recorteToolStripMenuItem.Name = "recorteToolStripMenuItem";
+            this.recorteToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.recorteToolStripMenuItem.Text = "Recorte";
+            // 
+            // coToolStripMenuItem
+            // 
+            this.coToolStripMenuItem.Name = "coToolStripMenuItem";
+            this.coToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.coToolStripMenuItem.Text = "Cohen–Sutherland";
+            this.coToolStripMenuItem.Click += new System.EventHandler(this.coToolStripMenuItem_Click);
+            // 
+            // sutherlandHodgmanToolStripMenuItem
+            // 
+            this.sutherlandHodgmanToolStripMenuItem.Name = "sutherlandHodgmanToolStripMenuItem";
+            this.sutherlandHodgmanToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.sutherlandHodgmanToolStripMenuItem.Text = "Sutherland–Hodgman ";
+            this.sutherlandHodgmanToolStripMenuItem.Click += new System.EventHandler(this.sutherlandHodgmanToolStripMenuItem_Click);
+            // 
+            // curvasToolStripMenuItem
+            // 
+            this.curvasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.curvasDeBézierToolStripMenuItem,
+            this.bsplinesToolStripMenuItem});
+            this.curvasToolStripMenuItem.Name = "curvasToolStripMenuItem";
+            this.curvasToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.curvasToolStripMenuItem.Text = "Curvas";
+            // 
+            // curvasDeBézierToolStripMenuItem
+            // 
+            this.curvasDeBézierToolStripMenuItem.Name = "curvasDeBézierToolStripMenuItem";
+            this.curvasDeBézierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.curvasDeBézierToolStripMenuItem.Text = "Bezier";
+            this.curvasDeBézierToolStripMenuItem.Click += new System.EventHandler(this.curvasDeBézierToolStripMenuItem_Click);
+            // 
+            // bsplinesToolStripMenuItem
+            // 
+            this.bsplinesToolStripMenuItem.Name = "bsplinesToolStripMenuItem";
+            this.bsplinesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bsplinesToolStripMenuItem.Text = "B-splines ";
+            this.bsplinesToolStripMenuItem.Click += new System.EventHandler(this.bsplinesToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -122,5 +212,15 @@
         private System.Windows.Forms.ToolStripMenuItem circunfenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rellenoToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem circunferenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem elipseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem floodFillToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scanlineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sutherlandHodgmanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem curvasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem curvasDeBézierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bsplinesToolStripMenuItem;
     }
 }
