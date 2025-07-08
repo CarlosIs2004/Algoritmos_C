@@ -1,6 +1,6 @@
 ﻿namespace Algortino_de_lineas
 {
-    partial class Discretizacion_Forms
+    partial class Form_DiscretizacionCircunferencia
     {
         /// <summary>
         /// Required designer variable.
@@ -51,9 +51,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(230, 450);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.88889F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(183, 450);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // panel1
@@ -65,12 +65,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 129);
+            this.panel1.Size = new System.Drawing.Size(177, 98);
             this.panel1.TabIndex = 5;
             // 
             // starCircle
             // 
-            this.starCircle.Location = new System.Drawing.Point(63, 56);
+            this.starCircle.Location = new System.Drawing.Point(56, 52);
             this.starCircle.Name = "starCircle";
             this.starCircle.Size = new System.Drawing.Size(75, 23);
             this.starCircle.TabIndex = 8;
@@ -89,30 +89,30 @@
             // 
             // radius
             // 
-            this.radius.Location = new System.Drawing.Point(50, 30);
+            this.radius.Location = new System.Drawing.Point(50, 26);
             this.radius.Name = "radius";
-            this.radius.Size = new System.Drawing.Size(111, 20);
+            this.radius.Size = new System.Drawing.Size(88, 20);
             this.radius.TabIndex = 1;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 107);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(224, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(177, 340);
             this.dataGridView1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(230, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(183, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(570, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(617, 450);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // Discretizacion_Forms
+            // Form_DiscretizacionCircunferencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,7 +120,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Discretizacion_Forms";
+            this.Name = "Form_DiscretizacionCircunferencia";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

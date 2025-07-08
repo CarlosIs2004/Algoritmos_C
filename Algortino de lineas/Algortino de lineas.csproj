@@ -50,23 +50,23 @@
     <Compile Include="Controllers\GraficarFigurasController.cs" />
     <Compile Include="Models\CurvasParametricas.cs" />
     <Compile Include="Models\RecorteGeometrico.cs" />
-    <Compile Include="Views\BresenHam_Form.cs">
+    <Compile Include="Views\Form_BresenHam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BresenHam_Form.Designer.cs">
-      <DependentUpon>BresenHam_Form.cs</DependentUpon>
+    <Compile Include="Views\Form_BresenHam.Designer.cs">
+      <DependentUpon>Form_BresenHam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Discretizacion_Forms.cs">
+    <Compile Include="Views\Form_DiscretizacionCircunferencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Discretizacion_Forms.Designer.cs">
-      <DependentUpon>Discretizacion_Forms.cs</DependentUpon>
+    <Compile Include="Views\Form_DiscretizacionCircunferencia.Designer.cs">
+      <DependentUpon>Form_DiscretizacionCircunferencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ElipseForm.cs">
+    <Compile Include="Views\Form_Elipse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ElipseForm.Designer.cs">
-      <DependentUpon>ElipseForm.cs</DependentUpon>
+    <Compile Include="Views\Form_Elipse.Designer.cs">
+      <DependentUpon>Form_Elipse.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Form_B_splines .cs">
       <SubType>Form</SubType>
@@ -113,25 +113,25 @@
     <Compile Include="Models\Relleno.cs" />
     <Compile Include="Models\LineAlgoritm.cs" />
     <Compile Include="Models\DiscretizacionCircunferencia.cs" />
-    <Compile Include="Views\DDA_Form1.cs">
+    <Compile Include="Views\Form_DDA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\DDA_Form1.Designer.cs">
-      <DependentUpon>DDA_Form1.cs</DependentUpon>
+    <Compile Include="Views\Form_DDA.Designer.cs">
+      <DependentUpon>Form_DDA.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\BresenHam_Form.resx">
-      <DependentUpon>BresenHam_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Form_BresenHam.resx">
+      <DependentUpon>Form_BresenHam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DDA_Form1.resx">
-      <DependentUpon>DDA_Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Form_DDA.resx">
+      <DependentUpon>Form_DDA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Discretizacion_Forms.resx">
-      <DependentUpon>Discretizacion_Forms.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Form_DiscretizacionCircunferencia.resx">
+      <DependentUpon>Form_DiscretizacionCircunferencia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ElipseForm.resx">
-      <DependentUpon>ElipseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Form_Elipse.resx">
+      <DependentUpon>Form_Elipse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_B_splines .resx">
       <DependentUpon>Form_B_splines .cs</DependentUpon>

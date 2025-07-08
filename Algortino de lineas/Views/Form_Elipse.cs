@@ -11,12 +11,12 @@ using Algortino_de_lineas.Controllers;
 
 namespace Algortino_de_lineas.Views
 {
-    public partial class ElipseForm : Form
+    public partial class Form_Elipse : Form
     {
         Timer drawTimer = new Timer();
         int i;
         GraficarFigurasController graficoElipse;
-        public ElipseForm()
+        public Form_Elipse()
         {
             InitializeComponent();
             GraficarFigurasController.inicilizarTablaPuntos(dataGridView1);

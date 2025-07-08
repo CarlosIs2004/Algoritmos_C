@@ -1,6 +1,6 @@
 ﻿namespace Algortino_de_lineas.Views
 {
-    partial class ElipseForm
+    partial class Form_Elipse
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Algortino_de_lineas
 {
-    partial class DDA_Form1
+    partial class Form_DDA
     {
         /// <summary>
         /// Variable del diseñador necesaria.

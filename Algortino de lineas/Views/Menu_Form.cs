@@ -17,12 +17,13 @@ namespace Algortino_de_lineas
         public Menu_Form()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             if (fn == null) { 
-                 openChildForm(new DDA_Form1());
+                 openChildForm(new Form_DDA());
             }
 
         }
@@ -41,14 +42,14 @@ namespace Algortino_de_lineas
 
         private void dDAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new DDA_Form1());
+            openChildForm(new Form_DDA());
 
             
         }
 
         private void bresenhamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new BresenHam_Form());
+            openChildForm(new Form_BresenHam());
         }
 
 
@@ -56,12 +57,12 @@ namespace Algortino_de_lineas
 
         private void circunferenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new Discretizacion_Forms());
+            openChildForm(new Form_DiscretizacionCircunferencia());
         }
 
         private void elipseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new ElipseForm());
+            openChildForm(new Form_Elipse());
         }
 
         private void floodFillToolStripMenuItem_Click(object sender, EventArgs e)

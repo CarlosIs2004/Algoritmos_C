@@ -11,12 +11,12 @@ using Algortino_de_lineas.Controllers;
 
 namespace Algortino_de_lineas
 {
-    public partial class Discretizacion_Forms : Form
+    public partial class Form_DiscretizacionCircunferencia : Form
     {
         Timer drawTimer = new Timer();
         GraficarFigurasController grafico;
-        int i;
-        public Discretizacion_Forms()
+  
+        public Form_DiscretizacionCircunferencia()
         {
             InitializeComponent();
             GraficarFigurasController.inicilizarTablaPuntos(dataGridView1);
@@ -24,7 +24,7 @@ namespace Algortino_de_lineas
 
         private void starCircle_Click(object sender, EventArgs e)
         {
-            i = 1;
+  
             grafico = new GraficarFigurasController(pictureBox1);
 
             if (!GraficarFigurasController.validateInput(new TextBox[] { radius })) 
@@ -32,7 +32,7 @@ namespace Algortino_de_lineas
             grafico.ReadDataCircunferencia(new TextBox[] { radius }); 
                 
             dataGridView1.Rows.Clear();
-            drawTimer.Interval = 100;  
+            drawTimer.Interval = 10;  
             drawTimer.Tick -= DrawTimer_Tick; 
             drawTimer.Tick += DrawTimer_Tick; 
             drawTimer.Start();
@@ -41,7 +41,7 @@ namespace Algortino_de_lineas
         {
             if (grafico == null) return;
             grafico.DrawNextStep();
-            dataGridView1.Rows.Add(i++, grafico.punto.X.ToString("G"), grafico.punto.Y.ToString("G"));
+            dataGridView1.Rows.Add(grafico.iterador, grafico.punto.X, grafico.punto.Y);
             if (grafico.iterador >= grafico.puntos.Length)
             {
                 drawTimer.Stop();

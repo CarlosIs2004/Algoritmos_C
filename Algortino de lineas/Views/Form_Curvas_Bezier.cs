@@ -15,17 +15,17 @@ namespace Algortino_de_lineas.Views
     public partial class Form_Curvas_Bezier : Form
     {
         List<PointF> points = new List<PointF>();
-        int? puntoSeleccionado = null; // Índice del punto seleccionado
-        const float radioSeleccion = 8f; // Sensibilidad para seleccionar el punto
+        List<PointF> pointsCurva = new List<PointF>();
+        int? puntoSeleccionado = null; 
+        const float radioSeleccion = 8f; 
         GraficarFigurasController figuras;
-        PointF curva ;
+       
         double valor ;
         public Form_Curvas_Bezier()
         {
             InitializeComponent();
             figuras = new GraficarFigurasController(pictureBox1);
-            figuras.DrawGrid();
-            
+       
             trackBar1.Minimum = 0;
             trackBar1.Maximum = 100;
             trackBar1.SmallChange = 1;
@@ -57,10 +57,13 @@ namespace Algortino_de_lineas.Views
                 
                 e.Graphics.DrawLine(Pens.Black, points[0], points[1]);
                 e.Graphics.DrawLine(Pens.Black, points[1], points[2]);
-                PointF curva = CurvaBezierCuadratica(valor, points[0], points[1], points[2]);
-                e.Graphics.FillRectangle(Brushes.Blue, curva.X, curva.Y, 3, 3);
-            }
+                pointsCurva.Add(CurvaBezierCuadratica(valor, points[0], points[1], points[2]));
+                foreach(PointF curva in pointsCurva) { 
+                    e.Graphics.FillRectangle(Brushes.Blue, curva.X, curva.Y, 3, 3);
+                }  
 
+               
+            }
 
         }
 
@@ -85,6 +88,7 @@ namespace Algortino_de_lineas.Views
             if (puntoSeleccionado.HasValue && e.Button == MouseButtons.Left)
             {
                 points[puntoSeleccionado.Value] = new PointF(e.X, e.Y);
+                pointsCurva.Clear();
                 pictureBox1.Invalidate();
             }
         }
@@ -117,7 +121,11 @@ namespace Algortino_de_lineas.Views
             pictureBox1.Invalidate();
         }
 
-
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pointsCurva.Clear();
+            points.Clear();
+            pictureBox1.Invalidate();
+        }
     }
 }

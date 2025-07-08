@@ -14,7 +14,7 @@ namespace Algortino_de_lineas.Views
     public partial class Form_B_splines : Form
     {
         List<PointF> controlPoints;
-        int? puntoSeleccionado = null; // Índice del punto seleccionado
+        int? puntoSeleccionado = null; 
         const float radioSeleccion = 8f;
         bool dentro;
         public Form_B_splines()
@@ -26,7 +26,6 @@ namespace Algortino_de_lineas.Views
             pictureBox1.MouseUp += pictureBox1_MouseUp;
             this.dentro = false;
         }
-
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
@@ -42,38 +41,35 @@ namespace Algortino_de_lineas.Views
                 curvePoints.Add(BSplinePoint(t, controlPoints));
             }
 
-            // Dibuja la curva
             for (int i = 0; i < curvePoints.Count - 1; i++)
             {
                 e.Graphics.DrawLine(Pens.Blue, curvePoints[i], curvePoints[i + 1]);
             }
 
-            // Opcional: dibuja los puntos de control
             foreach (var pt in controlPoints)
                 e.Graphics.FillEllipse(Brushes.Red, pt.X - 3, pt.Y - 3, 6, 6);
         }
 
 
-        // Calcula un punto de la B-spline cúbica usando la base uniforme
+     
         private PointF BSplinePoint(float t, List<PointF> pts)
         {
             int n = pts.Count - 1;
-            // Para cúbica, necesitamos al menos 4 puntos
             if (n < 3) return PointF.Empty;
 
-            // Encuentra el segmento correspondiente
+            
             int k = (int)Math.Floor(t);
             if (k > n - 3) k = n - 3;
 
             float localT = t - k;
 
-            // Puntos de control relevantes
+            
             PointF p0 = pts[k];
             PointF p1 = pts[k + 1];
             PointF p2 = pts[k + 2];
             PointF p3 = pts[k + 3];
 
-            // Fórmulas de la base B-spline cúbica uniforme
+            
             float b0 = ((1 - localT) * (1 - localT) * (1 - localT)) / 6f;
             float b1 = (3 * localT * localT * localT - 6 * localT * localT + 4) / 6f;
             float b2 = (-3 * localT * localT * localT + 3 * localT * localT + 3 * localT + 1) / 6f;

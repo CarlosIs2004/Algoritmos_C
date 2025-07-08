@@ -69,12 +69,19 @@ namespace Algortino_de_lineas.Views
                
                 for (int i = 0; i < (nuevosPuntos.Length - 1); i+=2)
                 {
-                    //e.Graphics.DrawLine(new Pen(Color.FromArgb(100, 255, 0, 0), 2) , points[i], points[i + 1]);
+                    e.Graphics.DrawLine(new Pen(Color.FromArgb(100, 255, 0, 0), 2) , points[i], points[i + 1]);
                     e.Graphics.DrawLine(new Pen(Color.FromArgb(255, 0, 0, 0), 2), nuevosPuntos[i], nuevosPuntos[i + 1]);
 
                 }
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            points.Clear();
+            pictureBox1.Invalidate();
+            dibujar = false;
         }
     }
 }

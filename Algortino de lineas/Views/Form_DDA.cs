@@ -12,14 +12,14 @@ using Algortino_de_lineas.Controllers;
 
 namespace Algortino_de_lineas
 {
-    public partial class DDA_Form1 : Form
+    public partial class Form_DDA : Form
     {
       
         Timer drawTimer = new Timer();
         GraficarFigurasController grafico;
         List<Point> lines;
         int iter = 0;
-        public DDA_Form1()
+        public Form_DDA()
         {
             InitializeComponent();
             GraficarFigurasController.inicilizarTablaPuntos(dataGridView1);

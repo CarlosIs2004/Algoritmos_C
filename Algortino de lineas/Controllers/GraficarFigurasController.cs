@@ -51,12 +51,15 @@ namespace Algortino_de_lineas.Controllers
 
         public void DibujarDDa(Point puntoInicio, Point puntoFinal) {
             iterador = 0;
-            bufferGraphics.FillRectangle(Brushes.Blue, puntoInicio.X, -puntoInicio.Y, 5, 5);
-            canvas.Image = bufferBitmap;
             puntos = LineAlgoritm.DDA_Line(puntoInicio, puntoFinal);
 
         }
+        public void DibujarBresenhamLinea(Point puntoInicio, Point puntoFinal)
+        {
+            iterador = 0;
+            puntos = LineAlgoritm.Bresenham_Line(puntoInicio, puntoFinal);
 
+        }
 
 
         public void ReadDataCircunferencia(TextBox[] textBoxNames)

@@ -50,6 +50,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lineToolStripMenuItem,
             this.circunfenciaToolStripMenuItem,
@@ -166,14 +167,14 @@
             // curvasDeBézierToolStripMenuItem
             // 
             this.curvasDeBézierToolStripMenuItem.Name = "curvasDeBézierToolStripMenuItem";
-            this.curvasDeBézierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.curvasDeBézierToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.curvasDeBézierToolStripMenuItem.Text = "Bezier";
             this.curvasDeBézierToolStripMenuItem.Click += new System.EventHandler(this.curvasDeBézierToolStripMenuItem_Click);
             // 
             // bsplinesToolStripMenuItem
             // 
             this.bsplinesToolStripMenuItem.Name = "bsplinesToolStripMenuItem";
-            this.bsplinesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bsplinesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.bsplinesToolStripMenuItem.Text = "B-splines ";
             this.bsplinesToolStripMenuItem.Click += new System.EventHandler(this.bsplinesToolStripMenuItem_Click);
             // 
